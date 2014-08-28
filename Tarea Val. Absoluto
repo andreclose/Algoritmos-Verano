@@ -1,0 +1,12 @@
+# include "stdafx.h"
+# include <iostream>
+
+int main (void)
+{ int n;
+  cout << "Ingrese el numero que deasea verificar" << endl;
+  cin >> n ;
+  if (n<0)
+  { n=n*-1;}
+   cout << "El valor absoluto del num. es:" << n;
+  return 0;
+}  
