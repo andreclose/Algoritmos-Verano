@@ -1,0 +1,29 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "math.h"
+#include "conio.h"
+
+using namespace std;
+
+
+int main()
+{float a,b,c,y,x1,x2;
+ cin >> a;
+ cin >> b;
+ cin >> c;
+ y=pow(b,2)-4*a*c;
+ if(y>0)
+   { x1=(-b+sqrt(y))/(2*a);
+     x2=(-b-sqrt(y))/(2*a);
+	 cout<< x1 << endl;                                                                                                                                                                  
+	 cout<< x2;
+   }
+ else
+ { cout<<"No es real";}
+ getch();
+
+          
+	return 0;
+}
+
