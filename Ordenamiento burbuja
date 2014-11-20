@@ -1,0 +1,58 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void leervec(int a[], int n);
+void mostrarvec(int a[], int n);
+void ordenar(int a[], int n);
+bool verificar(int n);
+
+int main()
+{int n, a[100];
+ cout<<"ingrese el tamanho";
+ cin>> n;
+ leervec(a,n);
+ mostrarvec(a,n);
+ ordenar(a,n);
+ mostrarvec(a,n);
+ getch();
+ return 0;
+}
+
+void leervec(int a[], int n)
+{int i;
+ bool v;
+ for(i=0;i<n;i++)
+ {do{cin>>a[i];
+     v=verificar(a[i]);
+    }while(v==false);
+ }
+}
+
+void mostrarvec(int a[], int n)
+{int i;
+ for(i=0;i<n;i++)
+ {cout<<"a["<<i<<"]="<<a[i]<<endl;
+ }
+}
+
+void ordenar(int a[], int n)
+{int i, j, aux;
+ for(i=0;i<n;i++)
+ {for (j=i;j<n;j++)
+ {if(a[i]>a[j])
+    {aux=a[j];
+     a[j]=a[i];
+	 a[i]=aux;
+    }
+ }
+ }
+}
+
+bool verificar(int n)
+{if (n>150||n<0)
+{return false;}
+else
+{return true;}
+}
