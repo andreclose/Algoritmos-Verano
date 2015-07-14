@@ -1,0 +1,33 @@
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+int potencia(int a, int b);
+
+int _tmain(int argc, _TCHAR* argv[])
+{int a, b, p;
+	do{cout<<"Ingrese la base:"<<endl;
+	   cin>>a;
+	   cout<<"Ingrese la potencia:"<<endl;
+	   cin>>b;
+	   if (a==0 && b==0)
+		   cout<<"Error: Indeterminacion 0 a la 0"<<endl;
+      }while(a==0 && b<=0);
+	p=potencia(a,b);
+	cout<<"El resultado es:"<<p;
+	return 0;
+}
+
+int potencia(int a, int b)
+{int p=1;
+ if(b==0)
+   p=1;
+ else
+ {
+	 for(int i=0;i<=b;i++)
+     {p=p*a;
+     }
+ }
+ return p;
+}
